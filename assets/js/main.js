@@ -1,23 +1,45 @@
-let inputText = prompt("Ingresa un Nómbre Registrado: ");
+/*alert("Productos : Leche : 2$. Galletas : 5$. Chocolate : 4$.");
 
-while (inputText === "ESC"){
+let product1 = "Leche";
+let product2 = "Galletas";
+let product3 = "Chocolate";
+let price1 = 2;
+let price2 = 5;
+let price3 = 4;
+let iva = 1.16;
+let product = prompt("Selecciona entre nuestros productos :");
 
-    alert("El usuario " + inputText + " esta registrado.");
+function products() {
+    
+    switch (product) {
+        case product1:
+            
+            let resultado1 = price1 * iva;
+            alert("Compraste " + product + " por " + resultado1 + "$");
 
-    break;
+            break;
 
-}
+        case product2:
 
-while (inputText != "ESC"){
+            let resultado2 = price2 * iva;
+            alert("Compraste " + product + " por " + resultado2 + "$");
 
-    for (let i = 1; i <= 3; i++) {
+            break;
 
-        alert("Intento N° " + i + " de 3. El usuario " + inputText + " no esta registrado.");
-        
-        inputText = prompt("Ingresa otro usuario");
+        case product3:
 
+            let resultado3 = price3 * iva;
+            alert("Compraste " + product + " por " + resultado3 + "$");
+
+            break;
+    
+        default:
+
+            alert("No existe este producto");
+
+            break;
     }
 
-    break;
-
 }
+
+products(); */
