@@ -1,4 +1,4 @@
-/*alert("Productos : Leche : 2$. Galletas : 5$. Chocolate : 4$.");
+alert("Productos : Leche : 2$. Galletas : 5$. Chocolate : 4$.");
 
 let product1 = "Leche";
 let product2 = "Galletas";
@@ -42,4 +42,4 @@ function products() {
 
 }
 
-products(); */
+products(); 
