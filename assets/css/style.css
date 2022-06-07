@@ -51,20 +51,20 @@ header {
 
 }
 
-.h_logo {
+.h__logo {
 
     display: flex;
     align-items: center;
 
 }
 
-.h_logo img {
+.h__logo img {
 
     width: 4rem;
 
 }
 
-.h_logo h1 {
+.h__logo h1 {
 
     font-size: 2.2rem;
     font-family: 'Just Another Hand', cursive;
@@ -72,12 +72,12 @@ header {
 
 }
 
-.h_search form input {
+.h__search form input {
 
     width: 35rem;
     height: 2.5rem;
     outline: none;
-    /*box-shadow: 0 1px 2px 0 #3c70a3;*/
+    box-shadow: 0 1px 2px 0 #3c70a3;
     border-radius: 15px;
     font-size: 1rem;
     font-family: 'Expletus Sans', cursive;
@@ -85,7 +85,7 @@ header {
 
 }
 
-.h_search form button {
+.h__search form button {
 
     width: 2.5rem;
     height: 2.5rem;
@@ -93,16 +93,17 @@ header {
     box-shadow: 0 1px 2px 0 #3c70a3;
     border-radius: 15px;
     font-size: .95rem;
+    cursor: pointer;
 
 }
 
-.h_extra {
+.h__extra {
 
     display: flex;
 
 }
 
-.h_extra span {
+.h__extra span {
 
     font-size: 1.6rem;
     letter-spacing: 1rem;
@@ -135,7 +136,7 @@ footer {
 
 }
 
-.f_box {
+.f__box {
 
     display: flex;
     flex-direction: column;
@@ -143,7 +144,7 @@ footer {
 
 }
 
-.f_links {
+.f__links {
 
     display: flex;
     flex-direction: row;
@@ -152,7 +153,7 @@ footer {
 
 }
 
-.f_links ul li {
+.f__links ul li {
 
     font-size: 2rem;
     font-family: 'Just Another Hand', cursive;
@@ -162,7 +163,7 @@ footer {
 
 }
 
-.f_line {
+.f__line {
 
     width: 100vw;
     border-top: 1px solid #3c70a3;
@@ -170,20 +171,20 @@ footer {
 
 }
 
-.f_logo {
+.f__logo {
 
     display: flex;
     justify-content: center;
 
 }
 
-.f_logo img {
+.f__logo img {
 
     width: 2.5rem;
 
 }
 
-.f_legend {
+.f__legend {
 
     display: flex;
     justify-content: center;
@@ -239,7 +240,41 @@ footer {
 .menu ul li ul {
 
     display: none;
-    flex-direction: column;
+    position: absolute;
+    background-color: #3c6fa3bd;
+
+}
+
+.menu ul > li:hover ul {
+
+    display: block;
+
+}
+
+.menu ul li ul li {
+
+    font-size: 1rem;
+    text-align: center;
+    padding: .3rem;
+
+}
+
+.menu ul li ul li:hover {
+
+    position: relative;
+    width: 136%;
+    background-color: #1e3852;
+    right: .98rem;
+
+}
+
+.h__logo a h1:hover,
+.h__extra span:hover,
+.menu ul li a:hover,
+.menu ul li ul li a:hover,
+.f__links ul li a:hover {
+
+    color: #fff;
 
 }
 

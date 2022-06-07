@@ -1,35 +1,52 @@
-alert("Productos : Leche : 2$. Galletas : 5$. Chocolate : 4$.");
+alert("Productos : Televisión : 250$. Celular : 500$. Monitor : 425$.");
 
-let product1 = "Leche";
-let product2 = "Galletas";
-let product3 = "Chocolate";
-let price1 = 2;
-let price2 = 5;
-let price3 = 4;
-let iva = 1.16;
-let product = prompt("Selecciona entre nuestros productos :");
+let productA = prompt("Ingresa uno de nuestros productos :").toUpperCase();
+let iva = [1.16];
 
-function products() {
-    
-    switch (product) {
-        case product1:
+class TBD {
+
+    constructor(item, price) {
+
+        this.item = item.toUpperCase();
+        this.price = parseFloat(price);
+
+    }
+
+    extraIva() {
+
+        this.price = this.price * iva;
+
+    }
+
+}
+
+const product = [];
+product.push(new TBD("Televisión", 250));
+product.push(new TBD('Celular', 500));
+product.push(new TBD('Monitor', 425));
+
+for (const TBD of product)
+
+TBD.extraIva();
+
+function compra () {
+
+    switch (productA) {
+        case product[0].item:
             
-            let resultado1 = price1 * iva;
-            alert("Compraste " + product + " por " + resultado1 + "$");
+            alert("Compraste " + product[0].item + " por " + product[0].price + " $");
 
             break;
 
-        case product2:
+        case product[1].item:
 
-            let resultado2 = price2 * iva;
-            alert("Compraste " + product + " por " + resultado2 + "$");
+            alert("Compraste " + product[1].item + " por " + product[1].price + " $");
 
             break;
 
-        case product3:
+        case product[2].item:
 
-            let resultado3 = price3 * iva;
-            alert("Compraste " + product + " por " + resultado3 + "$");
+            alert("Compraste " + product[2].item + " por " + product[2].price + " $");
 
             break;
     
@@ -42,4 +59,4 @@ function products() {
 
 }
 
-products(); 
+compra();
