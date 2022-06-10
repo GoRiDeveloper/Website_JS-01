@@ -294,6 +294,7 @@ footer {
 .section__content {
 
     grid-area: main;
+    height: 100%;
 
 }
 

@@ -1,13 +1,17 @@
-alert("Productos : Televisión : 250$. Celular : 500$. Monitor : 425$.");
+/*alert("Productos :" + "\n" +  "-Celular : 500 $" + "\n" + "-Monitor : 425 $" + "\n" + "-Television : 250 $" + "\n" + "-Cargador : 30 $" + "\n" + "-USB : 20 $" + "\n" + "I.V.A. del 16%.");
 
-let productA = prompt("Ingresa uno de nuestros productos :").toUpperCase();
-let iva = [1.16];
+let product = prompt("Ingresa uno de nuestros productos :").toLowerCase();
+let bucle = prompt("¿Quieres seleccionar otro producto? (si o no) :").toLowerCase();
+const userProd = [];
+const saveProd = [];
+const iva = [1.16];
 
-class TBD {
+class baseDatos {
 
-    constructor(item, price) {
+    constructor(id, item, price) {
 
-        this.item = item.toUpperCase();
+        this.id = id;
+        this.item = item.toLowerCase();
         this.price = parseFloat(price);
 
     }
@@ -20,43 +24,41 @@ class TBD {
 
 }
 
-const product = [];
-product.push(new TBD("Televisión", 250));
-product.push(new TBD('Celular', 500));
-product.push(new TBD('Monitor', 425));
+const products = [];
+products.push( new baseDatos (1, 'celular', 500) );
+products.push( new baseDatos (2, 'television', 250) );
+products.push( new baseDatos (3, 'monitor', 425) );
+products.push( new baseDatos (4, 'cargador', 30) );
+products.push( new baseDatos (5, 'usb', 20) );
 
-for (const TBD of product)
+for (const baseDatos of products)
 
-TBD.extraIva();
+baseDatos.extraIva();
 
-function compra () {
+if (bucle === "si") {
+        
+    alert("Productos :" + "\n" +  "-Celular : 500 $" + "\n" + "-Monitor : 425 $" + "\n" + "-Television : 250 $" + "\n" + "-Cargador : 30 $" + "\n" + "-USB : 20 $" + "\n" + "I.V.A. del 16%.");
 
-    switch (productA) {
-        case product[0].item:
-            
-            alert("Compraste " + product[0].item + " por " + product[0].price + " $");
+    let product1 = prompt("Ingresa uno de nuestros productos :").toLowerCase();
+    userProd.push(product, product1);
 
-            break;
-
-        case product[1].item:
-
-            alert("Compraste " + product[1].item + " por " + product[1].price + " $");
-
-            break;
-
-        case product[2].item:
-
-            alert("Compraste " + product[2].item + " por " + product[2].price + " $");
-
-            break;
+    const productA = products.find(a => a.item === userProd[0]);
+    const productB = products.find(a => a.item === userProd[1]);
+    saveProd.push(productA, productB);
     
-        default:
+    const priceTotal = saveProd.reduce((acc, a) => acc + a.price, 0);
 
-            alert("No existe este producto");
+    alert("Compraste :" + "\n" + saveProd[0].item.toUpperCase() + " y " + saveProd[1].item.toUpperCase() + " por " + priceTotal + " $");
 
-            break;
-    }
+} else if (bucle === "no"){
+    
+    userProd.push(product);
 
-}
+    const productA = products.find(a => a.item === userProd[0]);
+    saveProd.push(productA);
 
-compra();
+    const priceTotal = saveProd.reduce((acc, a) => acc + a.price, 0);
+
+    alert("Compraste :" + "\n" + saveProd[0].item.toUpperCase() + " por " + priceTotal + " $");
+
+}*/
