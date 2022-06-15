@@ -43,7 +43,7 @@ function element () {
         <div class="box__prod-info">
 
             <a href="#">
-                <h3> ${info[0]} </h3>
+                <h3> ${info[0]} $ </h3>
             </a>
 
             <p> ${info[1]} </p>
