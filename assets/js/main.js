@@ -1,7 +1,8 @@
-/*alert("Productos :" + "\n" +  "-Celular : 500 $" + "\n" + "-Monitor : 425 $" + "\n" + "-Television : 250 $" + "\n" + "-Cargador : 30 $" + "\n" + "-USB : 20 $" + "\n" + "I.V.A. del 16%.");
+alert("Productos :" + "\n" +  "-Celular : 500 $" + "\n" + "-Monitor : 425 $" + "\n" + "-Television : 250 $" + "\n" + "-Cargador : 30 $" + "\n" + "-USB : 20 $" + "\n" + "I.V.A. del 16%.");
 
 let product = prompt("Ingresa uno de nuestros productos :").toLowerCase();
 let bucle = prompt("¿Quieres seleccionar otro producto? (si o no) :").toLowerCase();
+const products = [];
 const userProd = [];
 const saveProd = [];
 const iva = [1.16];
@@ -24,16 +25,20 @@ class baseDatos {
 
 }
 
-const products = [];
-products.push( new baseDatos (1, 'celular', 500) );
-products.push( new baseDatos (2, 'television', 250) );
-products.push( new baseDatos (3, 'monitor', 425) );
-products.push( new baseDatos (4, 'cargador', 30) );
-products.push( new baseDatos (5, 'usb', 20) );
+products.push( new baseDatos (1, 'refrigerador', 1000) );
+products.push( new baseDatos (2, 'celular', 550) );
+products.push( new baseDatos (3, 'tenis', 130) );
+products.push( new baseDatos (4, 'pcgamer', 1250) );
+products.push( new baseDatos (5, 'pantalla', 600) );
+products.push( new baseDatos (6, 'sillon', 100) );
+products.push( new baseDatos (7, 'asistentevirtual', 15) );
+products.push( new baseDatos (8, 'bocina', 100) );
 
-for (const baseDatos of products)
+for (const baseDatos of products){
 
-baseDatos.extraIva();
+    baseDatos.extraIva();
+
+}
 
 if (bucle === "si") {
         
@@ -44,6 +49,7 @@ if (bucle === "si") {
 
     const productA = products.find(a => a.item === userProd[0]);
     const productB = products.find(a => a.item === userProd[1]);
+
     saveProd.push(productA, productB);
     
     const priceTotal = saveProd.reduce((acc, a) => acc + a.price, 0);
@@ -61,4 +67,4 @@ if (bucle === "si") {
 
     alert("Compraste :" + "\n" + saveProd[0].item.toUpperCase() + " por " + priceTotal + " $");
 
-}*/
+}
