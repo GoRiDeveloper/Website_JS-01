@@ -1,9 +1,10 @@
 alert("Haz click en 'Productos Nuevos :' para agregar un nuevo producto para vender :)");
 
+let producto = { price : 'price', desc : 'desc' }
+
 const boxProd = document.getElementById("newprod");
 const et = document.getElementById("tit");
 const info = [];
-
 
 et.addEventListener("click", () => {
 
@@ -16,11 +17,12 @@ function infoProd () {
 
     if (info) {
         
-        let productPrice = prompt("Ingresa el precio de tu producto :");
-        let productName = prompt("Ingresa la descripción de tu producto :");
+        let producto = { price : 'price', desc : 'desc' }
+        
+        producto.price = prompt("Ingresa el precio de tu producto :");
+        producto.desc = prompt("Ingresa la descripción de tu producto :");
 
-        info.push(productPrice);
-        info.push(productName);
+        info.push(producto);
 
     }
 
