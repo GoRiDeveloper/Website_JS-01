@@ -43,10 +43,10 @@ function element () {
         <div class="box__prod-info">
 
             <a href="#">
-                <h3> ${info[0]} $ </h3>
+                <h3> ${info.price} $ </h3>
             </a>
 
-            <p> ${info[1]} </p>
+            <p> ${info.desc} </p>
             <button id="prod-1" class="anim-btn add"> Añadir al Carrito </button>
 
         </div>
