@@ -1,7 +1,5 @@
 alert("Haz click en 'Productos Nuevos :' para agregar un nuevo producto para vender :)");
 
-let producto = { price : 'price', desc : 'desc' }
-
 const boxProd = document.getElementById("newprod");
 const et = document.getElementById("tit");
 const info = [];
