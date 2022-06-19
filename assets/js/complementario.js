@@ -7,7 +7,7 @@ const info = [];
 et.addEventListener("click", () => {
 
     infoProd()
-    element()
+    element(info)
 
 });
 
@@ -26,34 +26,41 @@ function infoProd () {
 
 }
 
-function element () {
+function element (b) {
 
-    let agg = document.createElement("div");
-
-    agg.innerHTML = `
+    boxProd.innerHTML = "";
     
-        <div class="box__prod-img">
-
-            <a href="#">
-                <img src="./assets/img/prod-white.jpg" alt="prod">
-            </a>
-
-        </div>
-
-        <div class="box__prod-info">
-
-            <a href="#">
-                <h3> ${info.price} $ </h3>
-            </a>
-
-            <p> ${info.desc} </p>
-            <button id="prod-1" class="anim-btn add"> Añadir al Carrito </button>
-
-        </div>
+    b.forEach(e => {
     
-    `;
+        let agg = document.createElement("div");
+    
+        agg.className = "box__prod";
 
-    agg.className = "box__prod";
-    boxProd.append(agg);
+        agg.innerHTML = `
+    
+            <div class="box__prod-img">
+
+                <a href="#">
+                    <img src="./assets/img/prod-white.jpg" alt="prod">
+                </a>
+
+            </div>
+
+            <div class="box__prod-info">
+
+                <a href="#">
+                    <h3> ${e.price} $ </h3>
+                </a>
+
+                <p> ${e.desc} </p>
+                <button id="prod-1" class="anim-btn add"> Añadir al Carrito </button>
+
+            </div>
+    
+        `;
+    
+        boxProd.append(agg);
+    
+    } );
 
 }
